@@ -42,6 +42,9 @@
  * Input 9: ([-21, 301, 12, 4, 65, 56, 210, 356, 9, -47], 164)	*
  * Output 9: []							*
  * 								*
+ * Input 10: ([3, 5, -4, 8, 11, 1, -1, 6], 15)			*
+ * Output 10: []						*
+ * 								*
  * Solution Efficiency						*
  * Time Complexity: O(nlogn)					*
  * Space Complexity: O(1)					*
