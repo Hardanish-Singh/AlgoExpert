@@ -45,6 +45,12 @@
  * Input 10: ([3, 5, -4, 8, 11, 1, -1, 6], 15)			*
  * Output 10: []						*
  * 								*
+ * Input 11: ([14], 15)						*
+ * Output 11: []						*
+ * 								*
+ * Input 12: ([15], 15)						*
+ * Output 12: []						*
+ * 								*
  * Solution Efficiency						*
  * Time Complexity: O(nlogn)					*
  * Space Complexity: O(1)					*
