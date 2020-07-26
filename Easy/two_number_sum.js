@@ -33,6 +33,9 @@
  * Input 6: ([1, 2, 3, 4, 5, 6, 7, 8, 9, 15], 18)		*
  * Output 6: [3, 15]						*
  * 								*
+ * Input 7: ([-7, -5, -3, -1, 0, 1, 3, 5, 7], -5)		*
+ * Output 7: [-5, 0]						*
+ * 								*
  * Solution Efficiency						*
  * Time Complexity: O(nlogn)					*
  * Space Complexity: O(1)					*
