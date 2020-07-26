@@ -36,6 +36,9 @@
  * Input 7: ([-7, -5, -3, -1, 0, 1, 3, 5, 7], -5)		*
  * Output 7: [-5, 0]						*
  * 								*
+ * Input 8: ([-21, 301, 12, 4, 65, 56, 210, 356, 9, -47], 163)	*
+ * Output 8: [-47, 210]						*
+ * 								*
  * Solution Efficiency						*
  * Time Complexity: O(nlogn)					*
  * Space Complexity: O(1)					*
