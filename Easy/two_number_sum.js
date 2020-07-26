@@ -1,4 +1,5 @@
-/****************************************************************
+/*
+ ****************************************************************
  *          		ALGOEXPERT TWO SUM CHALLENGE		        *
  *                                                              *
  * Problem Statement                                            *
@@ -30,7 +31,8 @@
  * Solution Efficiency											*
  * Time Complexity: O(nlogn)									*
  * Space Complexity: O(1)										*
- ***************************************************************/
+ ****************************************************************
+*/
 
 function twoNumberSum(nums, target) {
 	nums.sort(function(a, b){return a - b});
