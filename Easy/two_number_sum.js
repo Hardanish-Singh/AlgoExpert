@@ -29,6 +29,9 @@
  * 								*
  * Input 5: ([1, 2, 3, 4, 5, 6, 7, 8, 9], 17)	 		*
  * Output 5: [8, 9]						*
+ *								*
+ * Input 6: ([1, 2, 3, 4, 5, 6, 7, 8, 9, 15], 18)		*
+ * Output 6: [3, 15]						*
  * 								*
  * Solution Efficiency						*
  * Time Complexity: O(nlogn)					*
