@@ -27,6 +27,9 @@
  * Input 4: ([4, 6, 1, -3], 3)					*
  * Output 4: [-3, 6]						*
  * 								*
+ * Input 5: ([1, 2, 3, 4, 5, 6, 7, 8, 9], 17)	 		*
+ * Output 5: [8, 9]						*
+ * 								*
  * Solution Efficiency						*
  * Time Complexity: O(nlogn)					*
  * Space Complexity: O(1)					*
