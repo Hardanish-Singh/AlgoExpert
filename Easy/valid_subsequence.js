@@ -16,6 +16,13 @@
  * Input 1: ([5, 1, 22, 25, 6, -1, 8, 10], [1, 6, -1, 10])      *
  * Output 1: true                                               *
  *                                                              *
+ * Input 2: ([5,1,22,25,6,-1,8,10], [5,1,22,25,6,-1,8,10])      *
+ * Output 2: true                                               *
+ *                                                              *
+ *                                                              *
+ * Input 3: ([5,1,22,25,6,-1,8,10], [5,1,22,6,-1,8,10])         *
+ * Output 3: true                                               *
+ *                                                              *
  * Solution Efficiency						*
  * Time Complexity: O(n)					*
  * Space Complexity: O(1)					*
