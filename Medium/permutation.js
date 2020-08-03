@@ -6,10 +6,13 @@ function swap(input, index_A, index_B) {
 }
 function getPermutations(array) {
         if(array.length==0) return [];
-        let permuationArray = new Array(), temp = [[array[0]]];
+        let temp = [[array[0]]];
         let i = 1;
         for(let j=0; j<temp.length; j++){
-                if(temp[j].length==array.length) break;
+                if(temp[j].length==array.length) {
+                        for(let b=j-1;b>=0;b--) temp.splice(b,1);
+                        return temp;
+                }
                 for(let k=0; k<temp[j].length+1; k++){
                         if(k==0) {
                                 let t = [...temp[j]];
@@ -20,8 +23,6 @@ function getPermutations(array) {
                 }
                 if(temp[j].length != temp[j+1].length) i++;
         }
-        let ans = new Array();
-        for(let h=0; h<temp.length; h++) if(temp[h].length == array.length) ans.push(temp[h]);
-        return ans;
 }
-    
+// Do not edit the line below.
+exports.getPermutations = getPermutations;
