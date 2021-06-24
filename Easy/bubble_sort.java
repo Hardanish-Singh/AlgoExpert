@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Program
 {
 	public static int[] bubbleSort( int[] array )
