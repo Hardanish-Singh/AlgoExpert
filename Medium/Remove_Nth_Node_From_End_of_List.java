@@ -64,14 +64,17 @@ class Program
 		                    break;
 		                }
 				// REMOVING THE LAST NODE FROM THE LINKED LIST
-				if( current.next == null )
+				else if( current.next == null )
 				{
 					isLastNode = true;
 					break;
 				}
-				previous.next = current.next;
-				current.next = null;
-				break;
+				else
+				{
+					previous.next = current.next;
+					current.next = null;
+					break;
+				}
 			}
 			current = current.next;
 			index++;
