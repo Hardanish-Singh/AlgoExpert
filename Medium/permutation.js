@@ -1,28 +1,40 @@
-function swap(input, index_A, index_B) {
-        let temp = input[index_A];
-        input[index_A] = input[index_B];
-        input[index_B] = temp;
-        return input;
-}
-function getPermutations(array) {
-        if(array.length==0) return [];
-        let temp = [[array[0]]];
-        let i = 1;
-        for(let j=0; j<temp.length; j++){
-                if(temp[j].length==array.length) {
-                        for(let b=j-1;b>=0;b--) temp.splice(b,1);
-                        return temp;
-                }
-                for(let k=0; k<temp[j].length+1; k++){
-                        if(k==0) {
-                                let t = [...temp[j]];
-                                t.unshift(array[i]);
-                                temp.push(t);
-                        }
-                        else temp.push(swap([...temp[temp.length-1]], k-1, k));
-                }
-                if(temp[j].length != temp[j+1].length) i++;
+function getPermutations( nums ) {
+        if( nums.length === 0 ) {
+                return [];
         }
+        let permutations = [];
+        let temp = [];
+        let temp_permutations = [];
+        for( let i=0; i<nums.length; i++ ) {
+                temp_permutations.push([nums[i]]);
+                temp = [...nums.slice(0,i), ...nums.slice(i+1)];
+                
+                while( true ) {
+                        
+                        let is_complete = true;
+                        for( let k=0; k<temp_permutations.length; k++ ){
+                                if( temp_permutations[k].length !== nums.length ) {
+                                        is_complete = false;
+                                        break;
+                                }
+                        }
+                        if( is_complete ) {
+                                break;
+                        }
+
+                        let elementArray = temp_permutations.shift();
+                        for( let j=0; j<temp.length; j++ ) {
+                                if( ! ( elementArray.includes( temp[j] ) ) ) {
+                                        temp_permutations.push( [ ...elementArray, temp[j] ] );
+                                }
+                        }
+                }
+                for( let g=0; g<temp_permutations.length; g++ ) {
+                        permutations.push(temp_permutations[g]);
+                }
+        }
+        return permutations;
 }
+
 // Do not edit the line below.
 exports.getPermutations = getPermutations;
