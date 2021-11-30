@@ -57,7 +57,7 @@
  ***************************************************************/
 
 function twoNumberSum(nums, target) {
-	nums.sort(function(a, b){return a - b});
+	nums.sort( (a, b) => a - b );
 	let leftIndex = 0;
 	let rightIndex = nums.length-1;
 	while(leftIndex < rightIndex){
