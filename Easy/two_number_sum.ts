@@ -56,16 +56,37 @@
  * Space Complexity: O(1)					*
  ***************************************************************/
 
-function twoNumberSum(nums, target) {
+function twoNumberSum( nums: Array<number>, target: number): Array<number> {
 	/*
 		APPROACH 1( NAIVE APPROACH )
 			Time Complexity: O(n^2)
 			Space Complexity: O(1)
-		for( let i=0; i<nums.length; i++ ) {
-			for( let j=i+1; j<nums.length; j++ ) {
-				if( nums[i] + nums[j] == target ) {
+		for( let i: number = 0; i<nums.length; i++ ) {
+			for( let j: number = i+1; j<nums.length; j++ ) {
+				if( nums[i] + nums[j] === target ) {
 					return [ nums[i], nums[j] ];
 				}
+			}
+		}
+		return [];
+	*/
+
+	/*
+		APPROACH 2( USING HASH TABLE )
+			Time Complexity: O(n)
+			Space Complexity: O(n)
+		let hashTable: {
+			[key: number]: boolean;
+		} = {
+
+		};
+		for( let i: number = 0; i<nums.length; i++ ) {
+			let diff: number = target - nums[i];
+			if( !( diff in hashTable ) ) {
+				hashTable[nums[i]] = true;
+			}
+			else {
+				return[ diff, nums[i] ];
 			}
 		}
 		return [];
@@ -77,8 +98,8 @@ function twoNumberSum(nums, target) {
 			Space Complexity: O(1)
 	*/
 	nums.sort( (a, b) => a - b );
-	let leftIndex = 0;
-	let rightIndex = nums.length-1;
+	let leftIndex: number = 0;
+	let rightIndex: number = nums.length-1;
 	while( leftIndex < rightIndex ){
 		if( nums[leftIndex] + nums[rightIndex] < target) {
 			leftIndex++;
