@@ -57,7 +57,25 @@
  ***************************************************************/
 
 function twoNumberSum(nums, target) {
-	//APPROACH 3( MOST OPTIMAL )
+	/*
+		APPROACH 1( NAIVE APPROACH )
+			Time Complexity: O(n^2)
+			Space Complexity: O(1)
+		for( let i=0; i<nums.length; i++ ) {
+			for( let j=i+1; j<nums.length; j++ ) {
+				if( nums[i] + nums[j] == target ) {
+					return [ nums[i], nums[j] ];
+				}
+			}
+		}
+		return [];
+	*/
+
+	/*
+		APPROACH 3( MOST OPTIMAL )
+			Time Complexity: O(nlog(n))
+			Space Complexity: O(1)
+	*/
 	nums.sort( (a, b) => a - b );
 	let leftIndex = 0;
 	let rightIndex = nums.length-1;
@@ -68,7 +86,7 @@ function twoNumberSum(nums, target) {
 		else if( nums[leftIndex] + nums[rightIndex] > target) {
 			rightIndex--;
 		}
-		else if( nums[leftIndex] + nums[rightIndex] ==target) {
+		else if( nums[leftIndex] + nums[rightIndex] === target) {
 			return [ nums[leftIndex], nums[rightIndex] ];
 		}
 	}
