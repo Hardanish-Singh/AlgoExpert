@@ -57,13 +57,20 @@
  ***************************************************************/
 
 function twoNumberSum(nums, target) {
+	//APPROACH 3( MOST OPTIMAL )
 	nums.sort( (a, b) => a - b );
 	let leftIndex = 0;
 	let rightIndex = nums.length-1;
-	while(leftIndex < rightIndex){
-		if((nums[leftIndex]+nums[rightIndex])<target) leftIndex++;
-		else if((nums[leftIndex]+nums[rightIndex])>target) rightIndex--;
-		else if((nums[leftIndex]+nums[rightIndex])==target) return [nums[leftIndex], nums[rightIndex]];
+	while( leftIndex < rightIndex ){
+		if( nums[leftIndex] + nums[rightIndex] < target) {
+			leftIndex++;
+		}
+		else if( nums[leftIndex] + nums[rightIndex] > target) {
+			rightIndex--;
+		}
+		else if( nums[leftIndex] + nums[rightIndex] ==target) {
+			return [ nums[leftIndex], nums[rightIndex] ];
+		}
 	}
 	return [];
 }
