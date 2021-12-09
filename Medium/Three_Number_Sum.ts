@@ -1,5 +1,5 @@
 /****************************************************************
- *          		ALGOEXPERT THREE SUM CHALLENGE		*
+ *                ALGOEXPERT THREE SUM CHALLENGE		*
  *                                                              *
  * Problem Statement                                            *
  * Write a function that takes in a non-empty array of distinct	*
