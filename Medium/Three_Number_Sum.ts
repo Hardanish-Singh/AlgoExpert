@@ -1,5 +1,5 @@
 /*****************************************************************************************************************
- *                ALGOEXPERT THREE SUM CHALLENGE		                                                 *
+ *                                        ALGOEXPERT THREE SUM CHALLENGE		                         *
  *                                                                                                               *
  * Problem Statement                                                                                             *
  * Write a function that takes in a non-empty array of distinct	integers & an integer representing a target sum. *
