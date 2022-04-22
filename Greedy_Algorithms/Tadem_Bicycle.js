@@ -15,6 +15,7 @@
         
         For example, if there are 4 riders (2 red-shirt riders and 2 blue-shirt riders) who have speeds of 1, 3, 4, 5, and if they're paired on tandem bicycles as follows: [1, 4], [5, 3], then the total speed of these tandem bicycles is 4 + 5 = 9.
 */
+
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
         redShirtSpeeds.sort( ( a, b ) => a - b );
         blueShirtSpeeds.sort( ( a, b ) => a - b );
