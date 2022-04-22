@@ -36,6 +36,9 @@
 * Input 3: ( [1, 2, 1, 9, 12, 3], [3, 3, 4, 6, 1, 2], false )   *
 * Output 3: 30                                                  *
 *                                                               *
+* Input 4: ( [1, 2, 1, 9, 12, 3], [3, 3, 4, 6, 1, 2], true )    *
+* Output 4: 37                                                  *
+*                                                               *
 ****************************************************************/
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
