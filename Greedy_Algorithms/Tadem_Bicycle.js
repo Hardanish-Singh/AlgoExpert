@@ -26,6 +26,10 @@
 * blue-shirt riders) who have speeds of 1, 3, 4, 5, & if they're* 
 * paired on tandem bicycles as follows: [1, 4], [5, 3], then    *
 * the total speed of these tandem bicycles is 4 + 5 = 9.        *
+*                                                               *
+* Input 1: ( [5, 5, 3, 9, 2], [3, 6, 7, 2, 1], true )           *
+* Output 1: 32                                                  *
+*                                                               *
 ****************************************************************/
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
