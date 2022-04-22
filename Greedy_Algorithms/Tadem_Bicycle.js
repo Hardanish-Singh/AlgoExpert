@@ -47,6 +47,12 @@
 *            [3, 3, 4, 6, 1, 2, 5, 6, 34, 256, 123, 32], false )*
 * Output 6: 484                                                 *
 *                                                               *
+* Input 7: ( [1], [5], true )                                   *
+* Output 7: 5                                                   *
+*                                                               *
+* Input 8: ( [1], [5], false )                                  *
+* Output 8: 5                                                   *
+*                                                               *
 ****************************************************************/
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
