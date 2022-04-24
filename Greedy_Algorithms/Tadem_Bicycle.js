@@ -58,6 +58,10 @@
 *                                                               *
 * Input 10: ( [1, 1, 1, 1], [1, 1, 1, 1], false )               *
 * Output 10: 4                                                  *
+*                                                               *
+* Input 11: ( [1, 1, 1, 1, 2, 2, 2, 2, 9, 11]                   *
+*              [1, 1, 1, 1, 3, 3, 3, 3, 5, 7], true )           *
+* Output 11: 48                                                 *
 ****************************************************************/
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
