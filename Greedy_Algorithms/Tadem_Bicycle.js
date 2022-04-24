@@ -78,6 +78,12 @@
 * Input 15: ( [5, 4, 3, 2, 1], [1, 2, 3, 4, 5], false )         *
 * Output 15: 15                                                 *
 *                                                               *
+* Input 16: ( [5, 4, 3, 2, 1], [1, 2, 3, 4, 5], true )          *
+* Output 16: 21                                                 *
+*                                                               *
+* Input 17: ( [], [], true )                                    *
+* Output 17: 0                                                  *
+*                                                               *
 ****************************************************************/
 
 function tandemBicycle(redShirtSpeeds, blueShirtSpeeds, fastest) {
