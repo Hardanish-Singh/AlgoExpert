@@ -1,4 +1,4 @@
-function getNthFib(n) {
+function getNthFib( n ) {
         if( n == 1 ) {
                 return 0;
         }
