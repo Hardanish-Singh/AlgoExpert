@@ -1,7 +1,7 @@
 /****************************************************************
 *            ALGOEXPERT NON CONSTRUCTIBLE CHANGE CHALLENGE	*
 *                                                               *
-* Given an array of positive integers representing the values of*
+* Given an coins of positive integers representing the values of*
 * coins in your possession, write a function that returns the   *
 * minimum amount of change (the minimum sum of money) that you  *
 * cannot create. The given coins can have any positive integer  *
@@ -18,18 +18,18 @@
 *                                                               *
 ****************************************************************/
 
-function nonConstructibleChange(array) {
-        if(array.length === 0 ) {
+function nonConstructibleChange( coins ) {
+        if( coins.length === 0 ) {
                 return 1;
         }
-        array.sort( ( a, b ) => a - b );
+        coins.sort( ( a, b ) => a - b );
 	var powerSets = [  ];
         var sums = [ ];
         var i = 0;
 
-        for( i = 0; i < array.length; i++ ) {
-                powerSets.push( [ array[ i ], i ] );
-                sums.push( [ array[ i ] ] );
+        for( i = 0; i < coins.length; i++ ) {
+                powerSets.push( [ coins[ i ], i ] );
+                sums.push( [ coins[ i ] ] );
         }
         i = 0;
         while( true ) {
@@ -38,9 +38,9 @@ function nonConstructibleChange(array) {
                 }
                 let temp = powerSets[i].slice(0, powerSets[i].length - 1) ;
                 let index = powerSets[i][powerSets[i].length - 1];
-                for( let j = index + 1; j < array.length; j++ ) {
-                        let t = [ ...temp, array[j], j ];
-                        sums.push( [ ...temp, array[j] ] );
+                for( let j = index + 1; j < coins.length; j++ ) {
+                        let t = [ ...temp, coins[j], j ];
+                        sums.push( [ ...temp, coins[j] ] );
                         powerSets.push( t );
                 }
                 i++;
