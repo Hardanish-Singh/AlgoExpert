@@ -28,6 +28,9 @@
 * Input 5: [87]                                                 *
 * Output 5: 1                                                   *
 *                                                               *
+* Input 5: [5, 6, 1, 1, 2, 3, 4, 9]                             *
+* Output 5: 32                                                  *
+*                                                               *
 ****************************************************************/
 
 function nonConstructibleChange( coins ) {
