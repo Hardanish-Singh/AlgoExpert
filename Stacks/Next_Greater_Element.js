@@ -18,12 +18,12 @@ function nextGreaterElement( array ) {
 		if( max > array[i] ) {
 		        nextGreatestElements.push( max );
 		} else {
-			temp = [array[i], ...array.slice(0 , i)];
+			temp = [ array[i], ...array.slice(0 , i) ];
 			max = findFirstMax(temp);
 			if( max > array[i] ) {
 				nextGreatestElements.push( max );
 			} else {
-				nextGreatestElements.push(-1);
+				nextGreatestElements.push( -1 );
 			}
 		}
 	}
