@@ -1,4 +1,4 @@
-function findFirstMax(array) {
+function findFirstMax( array ) {
 	var max = array[0];
 	for( let i = 1; i < array.length; i++ ) {
 		if( array[i] > max ) {
