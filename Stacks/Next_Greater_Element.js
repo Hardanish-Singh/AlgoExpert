@@ -9,14 +9,14 @@ function findFirstMax( array ) {
 	return max;
 }
 
-function nextGreaterElement(array) {
+function nextGreaterElement( array ) {
 	var nextGreatestElements = [];
 	
 	for( let i = 0; i < array.length; i++ ) {
-		let temp = array.slice(i);
-		let max = findFirstMax(temp);
+		let temp = array.slice( i );
+		let max = findFirstMax( temp );
 		if( max > array[i] ) {
-			nextGreatestElements.push( max );
+		        nextGreatestElements.push( max );
 		} else {
 			temp = [array[i], ...array.slice(0 , i)];
 			max = findFirstMax(temp);
