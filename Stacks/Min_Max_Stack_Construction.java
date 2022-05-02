@@ -1,3 +1,15 @@
+/****************************************************************
+*       ALGOEXPERT MIN MAX STACK CONSTRUCTION CHALLENGE	        *
+*                                                               *
+* Write a MinMaxStack class for a Min Max Stack.                *
+* The class should support:                                     *
+*       1) Pushing and popping values on and off the stack.     *
+*       2) Peeking at the value at the top of the stack.        *
+*       3) Getting both the minimum and the maximum values in   *
+*          the stack at any given point in time.                *
+*                                                               *
+****************************************************************/
+
 import java.util.*;
 
 class Program 
