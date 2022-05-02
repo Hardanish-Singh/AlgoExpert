@@ -2,7 +2,6 @@ import java.util.*;
 
 class Program 
 {
-        // Feel free to add new properties and methods to the class.
         static class MinMaxStack 
 	{
 		ArrayList<Integer> stack = new ArrayList<Integer>();
