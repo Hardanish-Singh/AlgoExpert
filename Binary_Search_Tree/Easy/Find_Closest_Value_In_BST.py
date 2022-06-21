@@ -27,28 +27,28 @@
         SOLUTION 1:
                 RECURSIVE
 """
-        def findClosestValueInBst(tree, target):
+def findClosestValueInBst(tree, target):
+        closest = tree
+        return findClosestValueInBST( tree, target, closest )
+
+def findClosestValueInBST( tree, target, closest ):
+        if tree is None:
+                return closest.value
+        if abs( target - closest.value ) > abs( target - tree.value ):
                 closest = tree
-                return findClosestValueInBST( tree, target, closest )
+        if target < tree.value:
+                return findClosestValueInBST( tree.left, target, closest )
+        elif target > tree.value:
+                return findClosestValueInBST( tree.right, target, closest )
+        else:
+                return closest.value
 
-        def findClosestValueInBST( tree, target, closest ):
-                if tree is None:
-                        return closest.value
-                if abs( target - closest.value ) > abs( target - tree.value ):
-                        closest = tree
-                if target < tree.value:
-                        return findClosestValueInBST( tree.left, target, closest )
-                elif target > tree.value:
-                        return findClosestValueInBST( tree.right, target, closest )
-                else:
-                        return closest.value
-
-        # This is the class of the input tree. Do not edit.
-        class BST:
-                def __init__(self, value):
-                        self.value = value
-                        self.left = None
-                        self.right = None
+# This is the class of the input tree. Do not edit.
+class BST:
+        def __init__(self, value):
+                self.value = value
+                self.left = None
+                self.right = None
 
 
 """
