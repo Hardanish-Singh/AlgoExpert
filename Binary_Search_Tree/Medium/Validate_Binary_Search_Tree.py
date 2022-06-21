@@ -8,7 +8,7 @@ class BST:
 
 def checkIsValidBST( root, leftParentNodeValue, rightParentNodeValue ):
         if root is None:
-                return None
+                return True
         if root.value >= leftParentNodeValue:
                 return False
         if root.value < rightParentNodeValue:
