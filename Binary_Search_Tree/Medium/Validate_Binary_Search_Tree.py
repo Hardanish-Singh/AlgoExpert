@@ -7,6 +7,18 @@
                 2) its value is less than or equal to the values of every node to its right; 
                 3) its children nodes are either valid  BST nodes themselves or None / null.
         A BST is valid if and only if all of its nodes are valid  BST nodes.
+
+        Input:
+                tree =   10
+                       /     \
+                      5      15
+                    /   \   /   \
+                   2     5 13   22
+                 /           \
+                1            14
+        
+        Output:
+                true
 """
 
 class BST:
