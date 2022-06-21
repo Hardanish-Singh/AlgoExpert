@@ -9,13 +9,13 @@ class BST:
 def checkIsValidBST( root, leftParentNodeValue, rightParentNodeValue ):
         if root is None:
                 return None
-        if root.val >= leftParentNodeValue:
+        if root.value >= leftParentNodeValue:
                 return False
-        if root.val <= rightParentNodeValue:
+        if root.value < rightParentNodeValue:
                 return False
 
-        left = checkIsValidBST( root.left, root.val, rightParentNodeValue )
-        right = checkIsValidBST( root.right, leftParentNodeValue, root.val )
+        left = checkIsValidBST( root.left, root.value, rightParentNodeValue )
+        right = checkIsValidBST( root.right, leftParentNodeValue, root.value )
         
         if left and right:
                 return True
@@ -23,4 +23,4 @@ def checkIsValidBST( root, leftParentNodeValue, rightParentNodeValue ):
                 return False
 
 def validateBst(root):
-        return checkIsValidBST( root, -float("inf"), float("inf") )
+        return checkIsValidBST( root, float("inf"), -float("inf") )
