@@ -1,3 +1,11 @@
+"""
+        SOLUTION 1: RECURSIVE
+"""
+
+
+"""
+        SOLUTION 2: ITERATIVE
+"""
 # This is the class of the input binary tree.
 class BinaryTree:
         def __init__( self, value ):
