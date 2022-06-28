@@ -22,8 +22,9 @@
                         4) The depth of the node with value 5 is 2.
                         5) The depth of the node with value 6 is 2.
                         6) The depth of the node with value 7 is 2.
-                        Etc..
-                        Summing all of these depths yields 16.
+                        7) The depth of the node with value 8 is 3.
+                        8) The depth of the node with value 9 is 3.
+                        Summing all of these depths yields 16 ( 1 + 1 + 2 + 2 + 2 + 2 + 3 + 3 )
 """
 
 
