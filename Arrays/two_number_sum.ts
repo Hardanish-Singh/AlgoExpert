@@ -53,50 +53,57 @@
 * 								*
 ***************************************************************/
 
-function twoNumberSum( nums: Array<number>, target: number): Array<number> {
-	/*
-		APPROACH 1( NAIVE APPROACH )
-			Time Complexity: O(n^2)
-			Space Complexity: O(1)
-		for( let i: number = 0; i<nums.length; i++ ) {
-			for( let j: number = i+1; j<nums.length; j++ ) {
-				if( nums[i] + nums[j] === target ) {
-					return [ nums[i], nums[j] ];
-				}
+/*
+	SOLUTION 1( NAIVE APPROACH )
+		Time Complexity: O( n^2 )
+		Space Complexity: O( 1 )
+*/
+
+function twoNumberSumSolution1( nums: Array<number>, target: number): Array<number> {
+	for( let i: number = 0; i < nums.length; i++ ) {
+		for( let j: number = i+1; j<nums.length; j++ ) {
+			if( nums[i] + nums[j] === target ) {
+				return [ nums[i], nums[j] ];
 			}
 		}
-		return [];
-	*/
+	}
+	return [];
+}
 
-	/*
-		APPROACH 2( USING HASH TABLE )
-			Time Complexity: O(n)
-			Space Complexity: O(n)
-		let hashTable: {
-			[key: number]: boolean;
-		} = {
+/*
+	SOLUTION 2( USING HASH TABLE )
+		Time Complexity: O( n )
+		Space Complexity: O( n )
+*/
 
-		};
-		for( let i: number = 0; i<nums.length; i++ ) {
-			let diff: number = target - nums[i];
-			if( !( diff in hashTable ) ) {
-				hashTable[nums[i]] = true;
-			}
-			else {
-				return[ diff, nums[i] ];
-			}
+function twoNumberSumSolution2( nums: Array<number>, target: number): Array<number> {
+	let hashTable: {
+		[ key: number ]: boolean;
+	} = {
+
+	};
+	for( let i: number = 0; i < nums.length; i++ ) {
+		let diff: number = target - nums[i];
+		if( !( diff in hashTable ) ) {
+			hashTable[nums[i]] = true;
 		}
-		return [];
-	*/
+		else {
+			return[ diff, nums[i] ];
+		}
+	}
+	return [];
+}
 
-	/*
-		APPROACH 3( MOST OPTIMAL )
-			Time Complexity: O(nlog(n))
-			Space Complexity: O(1)
-	*/
+/*
+	SOLUTION 3( MOST OPTIMAL )
+		Time Complexity: O( nlog( n ) )
+		Space Complexity: O( 1 )
+*/
+
+function twoNumberSumSolution3( nums: Array<number>, target: number): Array<number> {
 	nums.sort( (a, b) => a - b );
 	let leftIndex: number = 0;
-	let rightIndex: number = nums.length-1;
+	let rightIndex: number = nums.length - 1;
 	while( leftIndex < rightIndex ){
 		if( nums[leftIndex] + nums[rightIndex] < target) {
 			leftIndex++;
