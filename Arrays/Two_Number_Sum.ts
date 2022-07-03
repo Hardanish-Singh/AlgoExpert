@@ -105,13 +105,13 @@ function twoNumberSumSolution3( nums: Array<number>, target: number): Array<numb
 	let leftIndex: number = 0;
 	let rightIndex: number = nums.length - 1;
 	while( leftIndex < rightIndex ){
-		if( nums[leftIndex] + nums[rightIndex] < target) {
+		if( nums[leftIndex] + nums[rightIndex] < target ) {
 			leftIndex++;
 		}
-		else if( nums[leftIndex] + nums[rightIndex] > target) {
+		else if( nums[leftIndex] + nums[rightIndex] > target ) {
 			rightIndex--;
 		}
-		else if( nums[leftIndex] + nums[rightIndex] === target) {
+		else if( nums[leftIndex] + nums[rightIndex] === target ) {
 			return [ nums[leftIndex], nums[rightIndex] ];
 		}
 	}
