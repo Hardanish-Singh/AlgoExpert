@@ -59,7 +59,7 @@
 		Space Complexity: O( 1 )
 */
 
-export function twoNumberSumSolution1( nums: Array<number>, target: number ): Array<number> {
+export function twoNumberSumSolution1( nums: Array<number>, target: number ): Array<number> | [] {
 	for( let i: number = 0; i < nums.length; i++ ) {
 		for( let j: number = i + 1; j < nums.length; j++ ) {
 			if( nums[i] + nums[j] === target ) {
@@ -76,7 +76,7 @@ export function twoNumberSumSolution1( nums: Array<number>, target: number ): Ar
 		Space Complexity: O( n )
 */
 
-export function twoNumberSumSolution2( nums: Array<number>, target: number ): Array<number> {
+export function twoNumberSumSolution2( nums: Array<number>, target: number ): Array<number> | [] {
 	let hashTable: {
 		[ key: number ]: boolean;
 	} = {
