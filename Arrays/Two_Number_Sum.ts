@@ -83,12 +83,12 @@ function twoNumberSumSolution2( nums: Array<number>, target: number): Array<numb
 
 	};
 	for( let i: number = 0; i < nums.length; i++ ) {
-		let diff: number = target - nums[i];
-		if( !( diff in hashTable ) ) {
-			hashTable[nums[i]] = true;
+		let difference: number = target - nums[i];
+		if( difference in hashTable ) {
+			return[ difference, nums[ i ] ];
 		}
 		else {
-			return[ diff, nums[i] ];
+			hashTable[ nums[ i ] ] = true;
 		}
 	}
 	return [];
