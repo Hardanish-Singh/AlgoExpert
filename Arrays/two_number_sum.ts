@@ -51,9 +51,6 @@
 * Input 12: ([15], 15)						*
 * Output 12: []							*
 * 								*
-* Solution Efficiency						*
-* Time Complexity: O(nlogn)					*
-* Space Complexity: O(1)					*
 ***************************************************************/
 
 function twoNumberSum( nums: Array<number>, target: number): Array<number> {
