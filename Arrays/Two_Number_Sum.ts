@@ -100,7 +100,7 @@ function twoNumberSumSolution2( nums: Array<number>, target: number): Array<numb
 		Space Complexity: O( 1 )
 */
 
-function twoNumberSumSolution3( nums: Array<number>, target: number): Array<number> {
+function twoNumberSumSolution3( nums: Array<number>, target: number): Array<number> | [] {
 	nums.sort( (a, b) => a - b );
 	let leftIndex: number = 0;
 	let rightIndex: number = nums.length - 1;
