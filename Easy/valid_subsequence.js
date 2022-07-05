@@ -1,5 +1,5 @@
 /****************************************************************
- *          		ALGOEXPERT TWO SUM CHALLENGE		*
+ *          ALGOEXPERT VALIDATE SUBSEQUENCE CHALLENGE		*
  *                                                              *
  * Problem Statement                                            *
  * Given two non-empty arrays of integers, write a function that*
