@@ -33,13 +33,19 @@
  * Space Complexity: O(1)					*
  ***************************************************************/
 
-function isValidSubsequence(array, sequence) {
-        if(sequence.length > array.length) return false;
-	for(let i=0; i<sequence.length; i++){
-		if(array.includes(sequence[i])){
-			if(!(i>=0 && array.indexOf(sequence[i], i)>array.indexOf(sequence[i-1], i-1))) return false;
+function isValidSubsequence( array, sequence ) {
+        if( sequence.length > array.length ) {
+		return false;
+	}
+	for( let i = 0; i < sequence.length; i++ ) {
+		if( array.includes( sequence[i] ) ) {
+			if( ! ( i >= 0 && array.indexOf( sequence[i], i ) > array.indexOf( sequence[i - 1], i - 1 ) ) ) {
+				return false;
+			}
 		}
-		else return false;
+		else {
+			return false;
+		}
 	}
 	return true;
 }
