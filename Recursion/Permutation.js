@@ -13,6 +13,7 @@
                                 [3, 2, 1]
                         ]
 */
+
 function getPermutations( nums ) {
         if( nums.length === 0 ) {
                 return [];
@@ -20,9 +21,9 @@ function getPermutations( nums ) {
         let permutations = [];
         let temp = [];
         let temp_permutations = [];
-        for( let i=0; i<nums.length; i++ ) {
-                temp_permutations.push([nums[i]]);
-                temp = [...nums.slice(0,i), ...nums.slice(i+1)];
+        for( let i = 0; i < nums.length; i++ ) {
+                temp_permutations.push( [ nums[i] ] );
+                temp = [...nums.slice(0, i), ...nums.slice(i + 1)];
                 
                 while( true ) {
                         
