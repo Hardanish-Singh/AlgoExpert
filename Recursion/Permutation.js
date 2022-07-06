@@ -28,7 +28,7 @@ function getPermutations( nums ) {
                 while( true ) {
                         
                         let is_complete = true;
-                        for( let k=0; k<temp_permutations.length; k++ ){
+                        for( let k = 0; k < temp_permutations.length; k++ ){
                                 if( temp_permutations[k].length !== nums.length ) {
                                         is_complete = false;
                                         break;
@@ -39,14 +39,14 @@ function getPermutations( nums ) {
                         }
 
                         let elementArray = temp_permutations.shift();
-                        for( let j=0; j<temp.length; j++ ) {
+                        for( let j = 0; j < temp.length; j++ ) {
                                 if( ! ( elementArray.includes( temp[j] ) ) ) {
                                         temp_permutations.push( [ ...elementArray, temp[j] ] );
                                 }
                         }
                 }
-                for( let g=0; g<temp_permutations.length; g++ ) {
-                        permutations.push(temp_permutations[g]);
+                for( let g = 0; g < temp_permutations.length; g++ ) {
+                        permutations.push( temp_permutations[g] );
                 }
         }
         return permutations;
