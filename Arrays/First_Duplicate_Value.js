@@ -1,8 +1,9 @@
 function sortDictionaryByValues( dict ) {
-        var items = Object.keys( dict ).map( key => [ key, dict[ key ] ] );
+        let items = Object.keys( dict )
+                          .map( key => [ key, dict[ key ] ] );
         // SORT BY VALUES
         items.sort( (first, second) => first[ 1 ] - second[ 1 ] );
-        var keys = items.map( (e) => e[0] );
+        let keys = items.map( (e) => e[0] );
         return keys;
 } 
     
