@@ -24,8 +24,8 @@ function firstDuplicateValue( array ) {
                 }
         }
     
-      let [ firstDuplicate, ] = sortDictionaryByValues( duplicates ) ;
-      return firstDuplicate == null ? -1 : Number( firstDuplicate ) ;
+      let [ firstDuplicate, ] = sortDictionaryByValues( duplicates );
+      return firstDuplicate == null ? -1 : Number( firstDuplicate );
 }
     
 // Do not edit the line below.
