@@ -23,6 +23,12 @@
 * Input 5: []                                             	*
 * Output 5: -1                                           	*
 *                                                               *
+* Input 6: [1]                                             	*
+* Output 6: -1                                           	*
+*                                                               *
+* Input 7: [1, 1]                                             	*
+* Output 7: -1                                           	*
+*                                                               *
 ***************************************************************/
 
 function sortDictionaryByValues( dict ) {
