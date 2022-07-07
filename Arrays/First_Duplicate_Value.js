@@ -5,7 +5,7 @@ function sortDictionaryByValues( dict ) {
         items.sort( (first, second) => first[ 1 ] - second[ 1 ] );
         let keys = items.map( (e) => e[0] );
         return keys;
-} 
+}
     
 function firstDuplicateValue( array ) {
         let duplicates = {
