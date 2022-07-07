@@ -1,3 +1,21 @@
+/****************************************************************
+*           ALGOEXPERT FIRST DUPLICATE VALUE CHALLENGE	        *
+*                                                              	*
+* Problem Statement                                            	*
+* Given an array of integers between 1 and n, inclusive, where  *
+* n is the length of the array, write a function that returns   *
+* the first integer that appears more than once                 *
+* (when the array is read from left to right).	                *
+* 								*
+* Examples                                                     	*
+* Input 1: [2, 1, 5, 2, 3, 3, 4]                           	*
+* Output 1: 2                                           	*
+* 								*
+* Input 2: [2, 1, 5, 3, 3, 2, 4]                          	*
+* Output 2: 3                                           	*
+*                                                               *
+***************************************************************/
+
 function sortDictionaryByValues( dict ) {
         let items = Object.keys( dict )
                           .map( key => [ key, dict[ key ] ] );
