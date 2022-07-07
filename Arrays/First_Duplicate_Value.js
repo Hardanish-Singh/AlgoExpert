@@ -28,6 +28,6 @@ function firstDuplicateValue( array ) {
       return firstDuplicate == null ? -1 : Number( firstDuplicate );
 }
     
-// Do not edit the line below.
+// DO NOT EDIT THE LINE BELOW.
 exports.firstDuplicateValue = firstDuplicateValue;
     
