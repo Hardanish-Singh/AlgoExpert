@@ -49,6 +49,8 @@
 *                                                               *
 ****************************************************************/
 
+// SOLUTION 1
+
 function sortDictionaryByValues( dict ) {
         let items = Object.keys( dict )
                           .map( key => [ key, dict[ key ] ] );
@@ -78,6 +80,8 @@ function firstDuplicateValue( array ) {
       let [ firstDuplicate, ] = sortDictionaryByValues( duplicates );
       return firstDuplicate == null ? -1 : Number( firstDuplicate );
 }
+
+// SOLUTION 2
     
 // DO NOT EDIT THE LINE BELOW.
 exports.firstDuplicateValue = firstDuplicateValue;
