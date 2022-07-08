@@ -54,7 +54,7 @@ function sortDictionaryByValues( dict ) {
                           .map( key => [ key, dict[ key ] ] );
         // SORT BY VALUES IN ASCENDING ORDER
         items.sort( ( first, second ) => first[ 1 ] - second[ 1 ] );
-        let keys = items.map( e => e[0] );
+        let keys = items.map( key => key[0] );
         return keys;
 }
     
