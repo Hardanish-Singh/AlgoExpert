@@ -93,7 +93,7 @@ function firstDuplicateValue( array ) {
       
         for( let i = 0; i < array.length; i++ ) {
                 if( duplicates[ array[ i ] ] ) {
-                  return array[ i ];
+                        return array[ i ];
                 }
                 duplicates[ array[ i ] ] = true;
         }
