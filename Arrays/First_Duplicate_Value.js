@@ -81,7 +81,25 @@ function firstDuplicateValue( array ) {
       return firstDuplicate == null ? -1 : Number( firstDuplicate );
 }
 
+// DO NOT EDIT THE LINE BELOW.
+exports.firstDuplicateValue = firstDuplicateValue;
+
 // SOLUTION 2
+
+function firstDuplicateValue( array ) {
+        let duplicates = {
+
+        };
+      
+        for( let i = 0; i < array.length; i++ ) {
+                if( duplicates[ array[ i ] ] ) {
+                  return array[ i ];
+                }
+                duplicates[ array[ i ] ] = true;
+        }
+
+        return -1;
+}
     
 // DO NOT EDIT THE LINE BELOW.
 exports.firstDuplicateValue = firstDuplicateValue;
