@@ -30,8 +30,8 @@ function powerset( array ) {
         
         i = 0;
         while( i !== powerSets.length - 1 ) {
-                let temp = powerSets[i].slice( 0, powerSets[i].length - 1 );
-                index = powerSets[i][powerSets[i].length - 1];
+                let temp = powerSets[ i ].slice( 0, powerSets[ i ].length - 1 );
+                index = powerSets[ i ][ powerSets[ i ].length - 1 ];
                 
                 for( let j = index + 1; j < array.length; j++ ) {
                         powerSets.push( [ ...temp, array[j], j ] );
