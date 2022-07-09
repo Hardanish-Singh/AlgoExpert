@@ -29,10 +29,7 @@ function powerset( array ) {
         }
         
         i = 0;
-        while( true ) {
-                if( i === powerSets.length - 1 ) {
-                        break;
-                }
+        while( i !== powerSets.length - 1 ) {
                 let temp = powerSets[i].slice( 0, powerSets[i].length - 1 );
                 index = powerSets[i][powerSets[i].length - 1];
                 
