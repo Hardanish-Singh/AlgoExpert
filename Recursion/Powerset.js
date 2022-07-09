@@ -16,30 +16,45 @@
 *            [1, 2, 3, 4],[]]                                   *
 ****************************************************************/
 
-function powerset(array) {
-        if( array.length === 0 ) {
-                return [ [] ];
+function powerset( array ) {
+        array.sort( (a, b) => a - b );
+	if( array.length === 0 ) {
+		return [ [] ];
 	}
 	var powerSets = [  ];
-        var i = 0;
-        for( i = 0; i < array.length; i++ ) {
-                powerSets.push( [ array[ i ] ] );
+    var i = 0;
+    for( i = 0; i < array.length; i++ ) {
+        powerSets.push( [ array[ i ], i ] );
+    }
+    i = 0;
+    while( true ) {
+        if( i === powerSets.length - 1 ) {
+            break;
         }
-        i = 0;
-        while( true ) {
-                if( i === powerSets.length - 1 ) {
-                        break;
-                }
-                let temp = powerSets[i];
-                let index = array.indexOf( temp[ temp.length - 1 ] );
-                for( let j = index + 1; j < array.length; j++ ) {
-                        let t = [ ...temp, array[j] ];
-                        powerSets.push( t );
-                }
-                i++;
+        let temp = powerSets[i].slice( 0, powerSets[i].length - 1 );
+        index = powerSets[i][powerSets[i].length - 1];
+        
+        for( let j = index + 1; j < array.length; j++ ) {
+            powerSets.push( [ ...temp, array[j], j ] );
         }
-	powerSets.push([]);
-	return powerSets;
+        
+        i++;
+    }
+
+    let hash_map = {
+        
+    };
+
+    for( let i = 0; i < powerSets.length; i++ ) {
+        hash_map[ powerSets[i].slice(0, powerSets[i].length - 1) ] = true;
+    }
+
+    let result = [];
+    for( const key of Object.keys( hash_map ) ) {
+        result.push( key.split(",").map(Number) );
+    }
+    result.push( [] );
+    return result;
 }
 
 // Do not edit the line below.
