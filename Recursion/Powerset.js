@@ -40,20 +40,20 @@ function powerset( array ) {
                 i++;
         }
 
-    let hash_map = {
-        
-    };
+        let hash_map = {
+                
+        };
 
-    for( let i = 0; i < powerSets.length; i++ ) {
-        hash_map[ powerSets[i].slice(0, powerSets[i].length - 1) ] = true;
-    }
+        for( let i = 0; i < powerSets.length; i++ ) {
+                hash_map[ powerSets[i].slice(0, powerSets[i].length - 1) ] = true;
+        }
 
-    let result = [];
-    for( const key of Object.keys( hash_map ) ) {
-        result.push( key.split(",").map(Number) );
-    }
-    result.push( [] );
-    return result;
+        let result = [];
+        for( const key of Object.keys( hash_map ) ) {
+                result.push( key.split(",").map(Number) );
+        }
+        result.push( [] );
+        return result;
 }
 
 // Do not edit the line below.
