@@ -30,11 +30,11 @@ function powerset( array ) {
         
         i = 0;
         while( i !== powerSets.length - 1 ) {
-                let temp = powerSets[ i ].slice( 0, powerSets[ i ].length - 1 );
+                let powerSet = powerSets[ i ].slice( 0, powerSets[ i ].length - 1 );
                 index = powerSets[ i ][ powerSets[ i ].length - 1 ];
                 
                 for( let j = index + 1; j < array.length; j++ ) {
-                        powerSets.push( [ ...temp, array[j], j ] );
+                        powerSets.push( [ ...powerSet, array[j], j ] );
                 }
                 
                 i++;
@@ -45,7 +45,13 @@ function powerset( array ) {
         };
 
         for( let i = 0; i < powerSets.length; i++ ) {
-                hash_map[ powerSets[i].slice(0, powerSets[i].length - 1) ] = true;
+                let powerSet = powerSets[ i ].slice( 0, powerSets[ i ].length - 1 );
+                if( hash_map[ powerSet ] ) {
+                        continue;
+                }
+                else {
+                        hash_map[ powerSet ] = true;
+                }
         }
 
         let result = [];
