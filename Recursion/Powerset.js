@@ -27,20 +27,21 @@ function powerset( array ) {
         for( i = 0; i < array.length; i++ ) {
                 powerSets.push( [ array[ i ], i ] );
         }
-    i = 0;
-    while( true ) {
-        if( i === powerSets.length - 1 ) {
-            break;
-        }
-        let temp = powerSets[i].slice( 0, powerSets[i].length - 1 );
-        index = powerSets[i][powerSets[i].length - 1];
         
-        for( let j = index + 1; j < array.length; j++ ) {
-            powerSets.push( [ ...temp, array[j], j ] );
+        i = 0;
+        while( true ) {
+                if( i === powerSets.length - 1 ) {
+                        break;
+                }
+                let temp = powerSets[i].slice( 0, powerSets[i].length - 1 );
+                index = powerSets[i][powerSets[i].length - 1];
+                
+                for( let j = index + 1; j < array.length; j++ ) {
+                        powerSets.push( [ ...temp, array[j], j ] );
+                }
+                
+                i++;
         }
-        
-        i++;
-    }
 
     let hash_map = {
         
