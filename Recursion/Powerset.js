@@ -22,7 +22,8 @@ function powerset( array ) {
 	}
 
         array.sort( (a, b) => a - b );
-	var powerSets = [  ];
+	
+        var powerSets = [  ];
         var i = 0;
         for( i = 0; i < array.length; i++ ) {
                 powerSets.push( [ array[ i ], i ] );
