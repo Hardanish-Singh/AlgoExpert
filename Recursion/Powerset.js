@@ -56,7 +56,7 @@ function powerset( array ) {
 
         let result = [];
         for( const key of Object.keys( hash_map ) ) {
-                result.push( key.split(",").map(Number) );
+                result.push( key.split(",").map( Number ) );
         }
         result.push( [] );
         return result;
@@ -64,4 +64,3 @@ function powerset( array ) {
 
 // Do not edit the line below.
 exports.powerset = powerset;
-
