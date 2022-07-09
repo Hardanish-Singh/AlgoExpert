@@ -17,15 +17,16 @@
 ****************************************************************/
 
 function powerset( array ) {
-        array.sort( (a, b) => a - b );
-	if( array.length === 0 ) {
+        if( array.length === 0 ) {
 		return [ [] ];
 	}
+
+        array.sort( (a, b) => a - b );
 	var powerSets = [  ];
-    var i = 0;
-    for( i = 0; i < array.length; i++ ) {
-        powerSets.push( [ array[ i ], i ] );
-    }
+        var i = 0;
+        for( i = 0; i < array.length; i++ ) {
+                powerSets.push( [ array[ i ], i ] );
+        }
     i = 0;
     while( true ) {
         if( i === powerSets.length - 1 ) {
