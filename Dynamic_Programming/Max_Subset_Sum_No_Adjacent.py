@@ -17,8 +17,8 @@
 * Input 3: [1]                                            	*
 * Output 3: 1                                           	*
 *                                                               *
-* Input 4: [3, 1, 3, 1, 1, 4, 4]                          	*
-* Output 4: 3                                           	*
+* Input 4: [1, 2]                                         	*
+* Output 4: 2                                           	*
 *                                                               *
 * Input 5: []                                             	*
 * Output 5: -1                                           	*
