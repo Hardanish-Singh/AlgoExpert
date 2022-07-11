@@ -20,8 +20,8 @@
 * Input 4: [1, 2]                                         	*
 * Output 4: 2                                           	*
 *                                                               *
-* Input 5: []                                             	*
-* Output 5: -1                                           	*
+* Input 5: [1, 2, 3]                                            *
+* Output 5: 4                                           	*
 *                                                               *
 * Input 6: [1]                                             	*
 * Output 6: -1                                           	*
