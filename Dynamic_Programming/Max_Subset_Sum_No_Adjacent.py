@@ -23,14 +23,14 @@
 * Input 5: [1, 2, 3]                                            *
 * Output 5: 4                                           	*
 *                                                               *
-* Input 6: [1]                                             	*
-* Output 6: -1                                           	*
+* Input 6: [1, 15, 3]                                           *
+* Output 6: 15                                           	*
 *                                                               *
-* Input 7: [1, 1]                                             	*
-* Output 7: -1                                           	*
+* Input 7: [7, 10, 12, 7, 9, 14]                                *
+* Output 7: 33                                           	*
 *                                                               *
-* Input 8: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10]                  *
-* Output 8: 10                                           	*
+* Input 8: [4, 3, 5, 200, 5, 3]                                 *
+* Output 8: 207                                           	*
 *                                                               *
 * Input 9: [2, 1, 1]                                            *
 * Output 9: 1                                           	*
