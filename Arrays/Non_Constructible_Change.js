@@ -103,9 +103,9 @@ function nonConstructibleChange( coins ) {
         let sums = generateSubsets( coins  );
         var result = [];
         for( i = 0; i < sums.length; i++ ) {
-                result.push( sums[i].reduce((partialSum, a) => partialSum + a, 0) );
+                result.push( sums[i].reduce( ( partialSum, a ) => partialSum + a, 0) );
         }
-        result = Array.from(new Set(result));
+        result = Array.from( new Set( result ) );
         result.sort( ( a, b ) => a - b );
 
         let minimumAmountOfChange = 0;
