@@ -105,8 +105,8 @@ function nonConstructibleChange( coins ) {
         for( i = 0; i < sums.length; i++ ) {
                 result.push( sums[i].reduce((partialSum, a) => partialSum + a, 0) );
         }
-        result.sort( ( a, b ) => a - b );
         result = Array.from(new Set(result));
+        result.sort( ( a, b ) => a - b );
 
         let c = 0;
         for( i = 0; i < result.length; i++ ) {
