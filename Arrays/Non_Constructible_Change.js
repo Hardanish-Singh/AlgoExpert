@@ -99,20 +99,21 @@ function nonConstructibleChange( coins ) {
         if( coins.length == 0 ) {
           return 1
         }
+
         let sums = generateSubsets( coins  );
         var result = [];
         for( i = 0; i < sums.length; i++ ) {
-          result.push( sums[i].reduce((partialSum, a) => partialSum + a, 0) );
+                result.push( sums[i].reduce((partialSum, a) => partialSum + a, 0) );
         }
         result.sort( ( a, b ) => a - b );
         result = Array.from(new Set(result));
 
         let c = 0;
         for( i = 0; i < result.length; i++ ) {
-          if( result[i] !== c ) {
-            return c;
-          }
-          c++;
+                if( result[i] !== c ) {
+                        return c;
+                }
+                c++;
         }
         return result[ result.length - 1 ] + 1;
 }
