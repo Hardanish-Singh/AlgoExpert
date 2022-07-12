@@ -108,12 +108,12 @@ function nonConstructibleChange( coins ) {
         result = Array.from(new Set(result));
         result.sort( ( a, b ) => a - b );
 
-        let c = 0;
+        let minimumAmountOfChange = 0;
         for( i = 0; i < result.length; i++ ) {
-                if( result[i] !== c ) {
-                        return c;
+                if( result[i] !== minimumAmountOfChange ) {
+                        return minimumAmountOfChange;
                 }
-                c++;
+                minimumAmountOfChange++;
         }
         return result[ result.length - 1 ] + 1;
 }
