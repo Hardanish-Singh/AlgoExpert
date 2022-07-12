@@ -48,55 +48,79 @@
 *                                                               *
 ****************************************************************/
 
-function nonConstructibleChange( coins ) {
-        if( coins.length === 0 ) {
-                return 1;
-        }
-        coins.sort( ( a, b ) => a - b );
-	var powerSets = [  ];
-        var sums = [ ];
-        var i = 0;
+var generateSubsets = function( array ) {
+        if( array.length === 0 ) {
+		return [ [] ];
+	}
 
-        for( i = 0; i < coins.length; i++ ) {
-                powerSets.push( [ coins[ i ], i ] );
-                sums.push( [ coins[ i ] ] );
+        array.sort( (a, b) => a - b );
+	
+        var powerSets = [  ];
+        var i = 0;
+        for( i = 0; i < array.length; i++ ) {
+                powerSets.push( [ array[ i ], i ] );
         }
+        
         i = 0;
-        while( true ) {
-                if( i === powerSets.length - 1 ) {
-                        break;
+        while( i !== powerSets.length - 1 ) {
+                let powerSet = powerSets[ i ].slice( 0, powerSets[ i ].length - 1 );
+                index = powerSets[ i ][ powerSets[ i ].length - 1 ];
+                
+                for( let j = index + 1; j < array.length; j++ ) {
+                        powerSets.push( [ ...powerSet, array[j], j ] );
                 }
-                let temp = powerSets[i].slice(0, powerSets[i].length - 1) ;
-                let index = powerSets[i][powerSets[i].length - 1];
-                for( let j = index + 1; j < coins.length; j++ ) {
-                        let t = [ ...temp, coins[j], j ];
-                        sums.push( [ ...temp, coins[j] ] );
-                        powerSets.push( t );
-                }
+                
                 i++;
         }
 
+        let hash_map = {
+                
+        };
+
+        for( let i = 0; i < powerSets.length; i++ ) {
+                let powerSet = powerSets[ i ].slice( 0, powerSets[ i ].length - 1 );
+                if( hash_map[ powerSet ] ) {
+                        continue;
+                }
+                else {
+                        hash_map[ powerSet ] = true;
+                }
+        }
+
+        let result = [];
+        for( const key of Object.keys( hash_map ) ) {
+                result.push( key.split(",").map( Number ) );
+        }
+        result.push( [] );
+        return result;
+}
+
+function nonConstructibleChange( coins ) {
+        if( coins.length == 0 ) {
+          return 1
+        }
+        let sums = generateSubsets( coins  );
         var result = [];
         for( i = 0; i < sums.length; i++ ) {
-                result.push( sums[i].reduce((partialSum, a) => partialSum + a, 0) );
+          result.push( sums[i].reduce((partialSum, a) => partialSum + a, 0) );
         }
         result.sort( ( a, b ) => a - b );
         result = Array.from(new Set(result));
-        let minSum = 1;
-        let c = 1;
-        let flag = false;
 
+        let c = 0;
         for( i = 0; i < result.length; i++ ) {
-                if( c !== result[i] ) {
-                        flag = true;
-                        minSum = c;
-                        break;
-                }
-                c++;
+          if( result[i] !== c ) {
+            return c;
+          }
+          c++;
         }
-
-    return flag === true ? minSum : result[result.length - 1 ] + 1;
+        return result[ result.length - 1 ] + 1;
 }
+
+// Do not edit the line below.
+exports.nonConstructibleChange = nonConstructibleChange;
+
+
 
 // Do not edit the line below.
 exports.nonConstructibleChange = nonConstructibleChange;
