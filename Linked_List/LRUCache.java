@@ -76,7 +76,8 @@
                         ],
                         "maxSize": 1
                 }
-        Output 2: [
+        Output 2: 
+                [
                         { "arguments": ["a"], "method": "getValueFromKey", "output": null },
                         { "arguments": ["a", 1], "method": "insertKeyValuePair", "output": null },
                         { "arguments": ["a"], "method": "getValueFromKey", "output": 1 },
