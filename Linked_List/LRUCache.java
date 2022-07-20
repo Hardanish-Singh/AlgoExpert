@@ -27,6 +27,108 @@
 *                                                               *
 ****************************************************************/
 
+/*
+        Input 1:
+                {
+                        "classMethodsToCall": [
+                                {
+                                        "arguments": ["b", 2],
+                                        "method": "insertKeyValuePair"
+                                },
+                                {
+                                        "arguments": ["a", 1],
+                                        "method": "insertKeyValuePair"
+                                },
+                                {
+                                        "arguments": ["c", 3],
+                                        "method": "insertKeyValuePair"
+                                },
+                                {
+                                        "arguments": [],
+                                        "method": "getMostRecentKey"
+                                },
+                                {
+                                        "arguments": ["a"],
+                                        "method": "getValueFromKey"
+                                },
+                                {
+                                        "arguments": [],
+                                        "method": "getMostRecentKey"
+                                },
+                                {
+                                        "arguments": ["d", 4],
+                                        "method": "insertKeyValuePair"
+                                },
+                                {
+                                        "arguments": ["b"],
+                                        "method": "getValueFromKey"
+                                },
+                                {
+                                        "arguments": ["a", 5],
+                                        "method": "insertKeyValuePair"
+                                },
+                                {
+                                        "arguments": ["a"],
+                                        "method": "getValueFromKey"
+                                }
+                        ],
+                        "maxSize": 3
+                }
+        Output 1:
+                [
+                        {
+                                "arguments": ["b", 2],
+                                "method": "insertKeyValuePair",
+                                "output": null
+                        },
+                        {
+                                "arguments": ["a", 1],
+                                "method": "insertKeyValuePair",
+                                "output": null
+                        },
+                        {
+                                "arguments": ["c", 3],
+                                "method": "insertKeyValuePair",
+                                "output": null
+                        },
+                        {
+                                "arguments": [],
+                                "method": "getMostRecentKey",
+                                "output": "c"
+                        },
+                        {
+                                "arguments": ["a"],
+                                "method": "getValueFromKey",
+                                "output": 1
+                        },
+                        {
+                                "arguments": [],
+                                "method": "getMostRecentKey",
+                                "output": "a"
+                        },
+                        {
+                                "arguments": ["d", 4],
+                                "method": "insertKeyValuePair",
+                                "output": null
+                        },
+                        {
+                                "arguments": ["b"],
+                                "method": "getValueFromKey",
+                                "output": null
+                        },
+                        {
+                                "arguments": ["a", 5],
+                                "method": "insertKeyValuePair",
+                                "output": null
+                        },
+                        {
+                                "arguments": ["a"],
+                                "method": "getValueFromKey",
+                                "output": 5
+                        }
+                ]
+*/
+
 import java.util.HashMap;
 
 class Node
