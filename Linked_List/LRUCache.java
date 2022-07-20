@@ -60,17 +60,14 @@ class Program
   
         static class LRUCache 
         {
-                // int maxSize;
-
                 private int capacity;
                 private Node head = null;
                 private Node tail = null;
                 // HashMap is a key-value pair of Keys as "Key Number" & Value as "Node Address"
                 private HashMap<String, Node> map = null;
 
-                public LRUCache(int capacity) 
+                public LRUCache( int capacity ) 
                 {
-                        // this.maxSize = maxSize > 1 ? maxSize : 1;
                         // Initialize Capacity
                         this.capacity = capacity;
                         // Initialize Doubly Linked List
