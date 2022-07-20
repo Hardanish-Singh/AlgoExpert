@@ -143,16 +143,16 @@ class Program
                 }
         }
 
-  static class LRUResult 
-  {
-    boolean found;
-    int value;
+        static class LRUResult 
+        {
+                boolean found;
+                int value;
 
-    public LRUResult(boolean found, int value) 
-    {
-      this.found = found;
-      this.value = value;
-    }
-  }
+                public LRUResult(boolean found, int value) 
+                {
+                        this.found = found;
+                        this.value = value;
+                }
+        }
 
 }
