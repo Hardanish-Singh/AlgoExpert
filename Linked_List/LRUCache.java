@@ -82,41 +82,13 @@
                         { "arguments": ["a"], "method": "getValueFromKey", "output": 1 },
                         { "arguments": ["a", 9001], "method": "insertKeyValuePair", "output": null },
                         { "arguments": ["a"], "method": "getValueFromKey", "output": 9001 },
-                        {
-                        "arguments": ["b", 2],
-                        "method": "insertKeyValuePair",
-                        "output": null
-                        },
-                        {
-                        "arguments": ["a"],
-                        "method": "getValueFromKey",
-                        "output": null
-                        },
-                        {
-                        "arguments": ["b"],
-                        "method": "getValueFromKey",
-                        "output": 2
-                        },
-                        {
-                        "arguments": ["c", 3],
-                        "method": "insertKeyValuePair",
-                        "output": null
-                        },
-                        {
-                        "arguments": ["a"],
-                        "method": "getValueFromKey",
-                        "output": null
-                        },
-                        {
-                        "arguments": ["b"],
-                        "method": "getValueFromKey",
-                        "output": null
-                        },
-                        {
-                        "arguments": ["c"],
-                        "method": "getValueFromKey",
-                        "output": 3
-                        }
+                        { "arguments": ["b", 2], "method": "insertKeyValuePair", "output": null },
+                        { "arguments": ["a"], "method": "getValueFromKey", "output": null },
+                        { "arguments": ["b"], "method": "getValueFromKey", "output": 2 },
+                        { "arguments": ["c", 3], "method": "insertKeyValuePair", "output": null },
+                        { "arguments": ["a"], "method": "getValueFromKey", "output": null },
+                        { "arguments": ["b"], "method": "getValueFromKey", "output": null },
+                        { "arguments": ["c"], "method": "getValueFromKey", "output": 3 }
                 ]
 */
 
