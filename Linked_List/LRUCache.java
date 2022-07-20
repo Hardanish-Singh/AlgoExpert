@@ -19,6 +19,11 @@
 * pair should be evicted from the cache & no longer retrievable;*
 * the newly added key-value pair should effectively replace it. *
 *                                                               *
+* Note that inserting a key-value pair with an already existing *
+* key should simply replace the key's value in the cache with   *
+* the new value and shouldn't evict a key-value pair if the     *
+* cache is full. Lastly, attempting to retrieve a value from a  *
+* key that isn't in the cache should return None /  null.       *     
 *                                                               *
 ****************************************************************/
 
