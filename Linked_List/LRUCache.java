@@ -8,6 +8,18 @@
 * 3) Retrieving the most recently used (the most recently       *
 *    inserted or retrieved) key with the getMostRecentKey method*
 *                                                               *
+* Each of these methods should run in constant time.            *
+*                                                               *
+* Additionally, the LRUCache class should store a capacity      *
+* property set to the size of the cache, which is passed in as  *
+* an argument during instantiation. This size represents the    *
+* maximum number of key-value pairs that the cache can store at *
+* once. If a key-value pair is inserted in the cache when it has*
+* reached maximum capacity, the least recently used key-value   *
+* pair should be evicted from the cache & no longer retrievable;*
+* the newly added key-value pair should effectively replace it. *
+*                                                               *
+*                                                               *
 ****************************************************************/
 
 import java.util.HashMap;
