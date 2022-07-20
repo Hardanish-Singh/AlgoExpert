@@ -1,3 +1,15 @@
+/****************************************************************
+*               ALGOEXPERT LRU CACHE CHALLENGE	                *
+*                                                              	*
+* Implement an LRUCache class for a Least Recently Used (LRU)   *
+* cache. The class should support:                              *
+* 1) Inserting key-value pair with the insertKeyValuePair method*
+* 2) Retrieving a key's value with the getValueFromKey method   *
+* 3) Retrieving the most recently used (the most recently       *
+*    inserted or retrieved) key with the getMostRecentKey method*
+*                                                               *
+****************************************************************/
+
 import java.util.HashMap;
 
 class Node
