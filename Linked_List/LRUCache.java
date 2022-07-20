@@ -52,26 +52,10 @@
                         { "arguments": [], "method": "getMostRecentKey", "output": "c" },
                         { "arguments": ["a"], "method": "getValueFromKey", "output": 1 },
                         { "arguments": [], "method": "getMostRecentKey", "output": "a" },
-                        {
-                                "arguments": ["d", 4],
-                                "method": "insertKeyValuePair",
-                                "output": null
-                        },
-                        {
-                                "arguments": ["b"],
-                                "method": "getValueFromKey",
-                                "output": null
-                        },
-                        {
-                                "arguments": ["a", 5],
-                                "method": "insertKeyValuePair",
-                                "output": null
-                        },
-                        {
-                                "arguments": ["a"],
-                                "method": "getValueFromKey",
-                                "output": 5
-                        }
+                        { "arguments": ["d", 4], "method": "insertKeyValuePair", "output": null },
+                        { "arguments": ["b"], "method": "getValueFromKey", "output": null },
+                        { "arguments": ["a", 5], "method": "insertKeyValuePair", "output": null },
+                        { "arguments": ["a"], "method": "getValueFromKey", "output": 5 }
                 ]
 */
 
