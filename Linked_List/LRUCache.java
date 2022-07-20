@@ -57,6 +57,25 @@
                         { "arguments": ["a", 5], "method": "insertKeyValuePair", "output": null },
                         { "arguments": ["a"], "method": "getValueFromKey", "output": 5 }
                 ]
+        
+        Input 2:
+                {
+                        "classMethodsToCall": [
+                                { "arguments": ["a"], "method": "getValueFromKey" },
+                                { "arguments": ["a", 1], "method": "insertKeyValuePair" },
+                                { "arguments": ["a"], "method": "getValueFromKey" },
+                                { "arguments": ["a", 9001], "method": "insertKeyValuePair" },
+                                { "arguments": ["a"], "method": "getValueFromKey" },
+                                { "arguments": ["b", 2], "method": "insertKeyValuePair" },
+                                { "arguments": ["a"], "method": "getValueFromKey" },
+                                { "arguments": ["b"], "method": "getValueFromKey" },
+                                { "arguments": ["c", 3], "method": "insertKeyValuePair" },
+                                { "arguments": ["a"], "method": "getValueFromKey" },
+                                { "arguments": ["b"], "method": "getValueFromKey" },
+                                { "arguments": ["c"], "method": "getValueFromKey" }
+                        ],
+                        "maxSize": 1
+                }
 */
 
 import java.util.HashMap;
