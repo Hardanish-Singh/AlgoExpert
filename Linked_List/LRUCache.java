@@ -81,7 +81,7 @@ class Program
                         map = new HashMap<String, Node>();
                 }
 
-                public void insertKeyValuePair(String key, int value) 
+                public void insertKeyValuePair( String key, int value ) 
                 {
                         if( map.containsKey( key ) )
                         {
@@ -99,7 +99,7 @@ class Program
                         insert( node );
                 }
 
-                public LRUResult getValueFromKey(String key) 
+                public LRUResult getValueFromKey( String key ) 
                 {
                         if( map.containsKey( key ) )
                         {
