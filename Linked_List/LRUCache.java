@@ -31,61 +31,23 @@
         Input 1:
                 {
                         "classMethodsToCall": [
-                                {
-                                        "arguments": ["b", 2],
-                                        "method": "insertKeyValuePair"
-                                },
-                                {
-                                        "arguments": ["a", 1],
-                                        "method": "insertKeyValuePair"
-                                },
-                                {
-                                        "arguments": ["c", 3],
-                                        "method": "insertKeyValuePair"
-                                },
-                                {
-                                        "arguments": [],
-                                        "method": "getMostRecentKey"
-                                },
-                                {
-                                        "arguments": ["a"],
-                                        "method": "getValueFromKey"
-                                },
-                                {
-                                        "arguments": [],
-                                        "method": "getMostRecentKey"
-                                },
-                                {
-                                        "arguments": ["d", 4],
-                                        "method": "insertKeyValuePair"
-                                },
-                                {
-                                        "arguments": ["b"],
-                                        "method": "getValueFromKey"
-                                },
-                                {
-                                        "arguments": ["a", 5],
-                                        "method": "insertKeyValuePair"
-                                },
-                                {
-                                        "arguments": ["a"],
-                                        "method": "getValueFromKey"
-                                }
+                                { "arguments": ["b", 2], "method": "insertKeyValuePair" },
+                                { "arguments": ["a", 1], "method": "insertKeyValuePair" },
+                                { "arguments": ["c", 3], "method": "insertKeyValuePair" },
+                                { "arguments": [], "method": "getMostRecentKey" },
+                                { "arguments": ["a"], "method": "getValueFromKey" },
+                                { "arguments": [], "method": "getMostRecentKey" },
+                                { "arguments": ["d", 4], "method": "insertKeyValuePair" },
+                                { "arguments": ["b"], "method": "getValueFromKey" },
+                                { "arguments": ["a", 5], "method": "insertKeyValuePair" },
+                                { "arguments": ["a"], "method": "getValueFromKey" }
                         ],
                         "maxSize": 3
                 }
         Output 1:
                 [
-                        {
-                                "arguments": ["b", 2],
-                                "method": "insertKeyValuePair",
-                                "output": null
-                        },
-                        {
-                                "arguments": ["a", 1],
-                                "method": "insertKeyValuePair",
-                                "output": null
-                        },
+                        { "arguments": ["b", 2], "method": "insertKeyValuePair", "output": null },
+                        { "arguments": ["a", 1], "method": "insertKeyValuePair", "output": null },
                         {
                                 "arguments": ["c", 3],
                                 "method": "insertKeyValuePair",
