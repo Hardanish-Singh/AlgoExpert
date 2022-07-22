@@ -78,7 +78,6 @@ class Program
 		// BUBBLE SORT
 		LinkedList current = head;
 		LinkedList next = null;
-		int temp = 0;
 
 		while( current != null )
 		{
@@ -87,9 +86,7 @@ class Program
 			{
 				if( current.value > next.value )
 				{
-					temp = current.value;
-					current.value = next.value;
-					next.value = temp;
+					swapNodes( current, next );
 				}
 				next = next.next;
 			}
@@ -97,6 +94,12 @@ class Program
 		}
 
 		return head;
-
 	}
+	
+	public static void swapNodes( LinkedList node1, LinkedList node2 )
+        {
+                int temp = node1.value;
+                node1.value = node2.value;
+                node2.value = temp;
+        }
 }
