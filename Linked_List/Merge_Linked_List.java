@@ -15,6 +15,12 @@
 * least one node; in other words, the heads will never be 	*
 * None / null.							*
 *                                                               *
+* Input 1							*
+* 		headOne = 2 -> 6 -> 7 -> 8			*
+*		headTwo = 1 -> 3 -> 4 -> 5 -> 9 -> 10		*
+* Output 1							*
+*		1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 *
+*								*
 ****************************************************************/
 
 class Program
