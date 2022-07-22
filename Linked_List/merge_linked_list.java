@@ -7,6 +7,13 @@
 * brand new list) and return the head of the merged list; the 	*
 * merged list should be in sorted order.   			*
 *								*
+* Each LinkedList node has an integer value as well as a next 	*
+* node pointing to the next node in the list or to  None / null *
+* if it's the tail of the list.					*
+*								*
+* You can assume that the input linked lists will always have at*
+* least one node; in other words, the heads will never be 	*
+* None / null.							*
 *                                                               *
 ****************************************************************/
 
