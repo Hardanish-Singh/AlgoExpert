@@ -1,4 +1,14 @@
-import java.util.*;
+/****************************************************************
+*             ALGOEXPERT MERGE LINKED LIST CHALLENGE	        *
+*                                                              	*
+* Write a function that takes in the heads of two Singly Linked *
+* Lists that are in sorted order, respectively. The function	*
+* should merge the lists in place (i.e., it shouldn't create a 	*
+* brand new list) and return the head of the merged list; the 	*
+* merged list should be in sorted order.   			*
+*								*
+*                                                               *
+****************************************************************/
 
 class Program
 {
