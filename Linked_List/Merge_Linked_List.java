@@ -63,7 +63,7 @@ class Program
 		while( headTwo != null )
 		{
 			LinkedList node = new LinkedList( headTwo.value );
-			if( head == null )
+			if( head == null && tail == null )
 			{
 			    head = tail = node;
 			}
