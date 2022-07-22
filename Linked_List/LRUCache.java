@@ -23,7 +23,7 @@
 * key should simply replace the key's value in the cache with   *
 * the new value and shouldn't evict a key-value pair if the     *
 * cache is full. Lastly, attempting to retrieve a value from a  *
-* key that isn't in the cache should return None /  null.       *     
+* key that isn't in the cache should return None /  null.       *
 *                                                               *
 ****************************************************************/
 
