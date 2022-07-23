@@ -23,8 +23,6 @@
 *								*
 ****************************************************************/
 
-import java.util.*;
-
 class Program
 {
 	// This is an input class. Do not edit.
