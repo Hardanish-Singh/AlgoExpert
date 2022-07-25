@@ -104,7 +104,7 @@ class Program
                 LinkedList tail = null;
                 LinkedList node = null;
 
-                while( true )
+                while( list1 != null || list2 != null )
                 {
                         if( list1 != null && list2 != null ) 
                         {
@@ -132,16 +132,11 @@ class Program
                                 break;
                         }
 
-                        else if( list1 == null && list2 != null )
+                        else if( list2 != null && list1 == null )
                         {
                                 node = new LinkedList( list2.value );
                                 tail.next = node;
                                 tail = node;
-                                break;
-                        }
-
-                        else
-                        {
                                 break;
                         }
 
