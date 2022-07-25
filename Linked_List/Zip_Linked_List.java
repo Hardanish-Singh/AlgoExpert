@@ -108,7 +108,7 @@ class Program
                 {
                         if( list1 != null && list2 != null ) 
                         {
-                                if( head == null )
+                                if( head == null && tail == null )
                                 {
                                         node = new LinkedList( list1.value );
                                         head = tail = node;
