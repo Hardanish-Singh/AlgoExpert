@@ -89,9 +89,6 @@ class Program
                         previous = copy;
                         copy = copy.next;  
                 }
-
-                list2 = reverseList( list2 );
-
                 // MAKE LINKEDLIST list1 FROM STARTING NODE TO PREVIOUS NODE
                 LinkedList list1 = linkedList;
                 while( linkedList.value != previous.value )
@@ -99,6 +96,8 @@ class Program
                         linkedList = linkedList.next;
                 }
                 linkedList.next = null;
+
+                list2 = reverseList( list2 );
 
                 // CONSTRUCT ZIP LINKED LIST
                 LinkedList head = null;
