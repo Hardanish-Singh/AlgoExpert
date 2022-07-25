@@ -1,3 +1,15 @@
+/****************************************************************
+*               ALGOEXPERT ZIP LINKED LIST CHALLENGE	        *
+*                                                              	*
+* You're given the head of a Singly Linked List of arbitrary    *
+* length  k. Write a function that zips the Linked List in place*
+* (i.e., doesn't create a brand new list) and returns its head. *
+*                                                               *
+* A Linked List is zipped if its nodes are in the following     *
+* order, where  k is the length of the Linked List:             *
+*                                                               *
+****************************************************************/
+
 class Program 
 {
         public static class LinkedList 
