@@ -94,12 +94,8 @@ class Program
 
                 // MAKE LINKEDLIST list1 FROM STARTING NODE TO PREVIOUS NODE
                 LinkedList list1 = linkedList;
-                while( linkedList != null )
+                while( linkedList.value != previous.value )
                 {
-                        if( linkedList.value == previous.value )
-                        {
-                                break;
-                        }
                         linkedList = linkedList.next;
                 }
                 linkedList.next = null;
