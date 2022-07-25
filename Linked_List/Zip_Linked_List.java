@@ -67,92 +67,97 @@ class Program
                 return head;
         }
 
-  public LinkedList zipLinkedList(LinkedList linkedList) 
-  {
-    if( linkedList.next == null )
-    {
-      return linkedList;
-    }
-    
-    LinkedList current = linkedList;
-    current = middleNode( current );
-      
-    LinkedList copy = linkedList;
-    LinkedList previous = null;
-    while( copy != null )
-    {
-      if( current.value == copy.value )
-      {
-        break;
-      }
-      previous = copy;
-      copy = copy.next;  
-    }
-      
-    current = reverseList( current );
+        public LinkedList zipLinkedList(LinkedList linkedList) 
+        {
+                if( linkedList == null )
+                {
+                        return null;
+                }
+                if( linkedList.next == null )
+                {
+                        return linkedList;
+                }
 
-    LinkedList copy2 = linkedList;
-      while( linkedList != null )
-      {
+                LinkedList current = linkedList;
+                current = middleNode( current );
+
+                // FIND PREVIOUS NODE BEFORE MIDDLE NODE
+                LinkedList copy = linkedList;
+                LinkedList previous = null;
+                while( copy != null )
+                {
+                        if( current.value == copy.value )
+                        {
+                                break;
+                        }
+                        previous = copy;
+                        copy = copy.next;  
+                }
+
+        current = reverseList( current );
+
+        LinkedList copy2 = linkedList;
+        while( linkedList != null )
+        {
         if( linkedList.value == previous.value )
         {
-          break;
+        break;
         }
         linkedList = linkedList.next;
-      }
-      linkedList.next = null;
-      
-      LinkedList head = null;
-      LinkedList tail = null;
-      LinkedList node = null;
+        }
+        linkedList.next = null;
 
-      while( true )
-      {
+        LinkedList head = null;
+        LinkedList tail = null;
+        LinkedList node = null;
+
+        while( true )
+        {
         if( copy2 != null && current != null ) 
         {
-          if( head == null )
-          {
-            node = new LinkedList( copy2.value );
-            head = tail = node;
-          }
-          else
-          {
-            node = new LinkedList( copy2.value );
-            tail.next = node;
-            tail = node;
-          }
-          node = new LinkedList( current.value );
-          tail.next = node;
-          tail = node;
+        if( head == null )
+        {
+        node = new LinkedList( copy2.value );
+        head = tail = node;
+        }
+        else
+        {
+        node = new LinkedList( copy2.value );
+        tail.next = node;
+        tail = node;
+        }
+        node = new LinkedList( current.value );
+        tail.next = node;
+        tail = node;
         }
 
         else if( copy2 != null && current == null )
         {
-          node = new LinkedList( copy2.value );
-          tail.next = node;
-          tail = node;
-          break;
+        node = new LinkedList( copy2.value );
+        tail.next = node;
+        tail = node;
+        break;
         }
 
         else if( copy2 == null && current != null )
         {
-          node = new LinkedList( current.value );
-          tail.next = node;
-          tail = node;
-          break;
+        node = new LinkedList( current.value );
+        tail.next = node;
+        tail = node;
+        break;
         }
 
         else
         {
-          break;
+        break;
         }
-        
+
         copy2 = copy2.next;
         current = current.next;
-      }
-    
-    return head;
-    
-  }
+        }
+
+        return head;
+
+        }
   
 }
