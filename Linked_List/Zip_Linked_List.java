@@ -15,12 +15,12 @@ class Program
         public static LinkedList middleNode(LinkedList head) 
         {
                 double middle = 0;
-                LinkedList current = head;
+                LinkedList list2 = head;
 
-                while( current != null )
+                while( list2 != null )
                 {
                         middle++;
-                        current = current.next;
+                        list2 = list2.next;
                 }
                 if( middle % 2 == 0 )
                 {
@@ -51,16 +51,16 @@ class Program
                 }
 
                 LinkedList previous = head;
-                LinkedList current = head.next;
+                LinkedList list2 = head.next;
                 LinkedList tail = head;
                 tail.next = null;
 
-                while( current != null )
+                while( list2 != null )
                 {
-                        LinkedList next = current.next;
-                        current.next = previous;
-                        previous = current;
-                        current = next;
+                        LinkedList next = list2.next;
+                        list2.next = previous;
+                        previous = list2;
+                        list2 = next;
                 }
 
                 head = previous;
@@ -78,15 +78,15 @@ class Program
                         return linkedList;
                 }
 
-                LinkedList current = linkedList;
-                current = middleNode( current );
+                LinkedList list2 = linkedList;
+                list2 = middleNode( list2 );
 
                 // FIND PREVIOUS NODE BEFORE MIDDLE NODE
                 LinkedList copy = linkedList;
                 LinkedList previous = null;
                 while( copy != null )
                 {
-                        if( current.value == copy.value )
+                        if( list2.value == copy.value )
                         {
                                 break;
                         }
@@ -94,7 +94,7 @@ class Program
                         copy = copy.next;  
                 }
 
-                current = reverseList( current );
+                list2 = reverseList( list2 );
 
                 // MAKE LINKEDLIST list1 FROM STARTING NODE TO PREVIOUS NODE
                 LinkedList list1 = linkedList;
@@ -115,7 +115,7 @@ class Program
 
                 while( true )
                 {
-                        if( list1 != null && current != null ) 
+                        if( list1 != null && list2 != null ) 
                         {
                                 if( head == null )
                                 {
@@ -128,12 +128,12 @@ class Program
                                         tail.next = node;
                                         tail = node;
                                 }
-                                node = new LinkedList( current.value );
+                                node = new LinkedList( list2.value );
                                 tail.next = node;
                                 tail = node;
                         }
 
-                        else if( list1 != null && current == null )
+                        else if( list1 != null && list2 == null )
                         {
                                 node = new LinkedList( list1.value );
                                 tail.next = node;
@@ -141,9 +141,9 @@ class Program
                                 break;
                         }
 
-                        else if( list1 == null && current != null )
+                        else if( list1 == null && list2 != null )
                         {
-                                node = new LinkedList( current.value );
+                                node = new LinkedList( list2.value );
                                 tail.next = node;
                                 tail = node;
                                 break;
@@ -155,7 +155,7 @@ class Program
                         }
 
                         list1 = list1.next;
-                        current = current.next;
+                        list2 = list2.next;
                 }
 
                 return head;
