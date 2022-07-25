@@ -14,6 +14,10 @@
 * node pointing to the next node in the list or to  None / null *
 * if it's the tail of the list.                                 *
 *                                                               *
+* You can assume that the input Linked List will always have at *
+* least one node; in other words, the head will never be        *
+* None / null                                                   *
+*                                                               *
 *                                                               *
 ****************************************************************/
 
