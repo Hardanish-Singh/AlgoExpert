@@ -18,6 +18,8 @@
 * least one node; in other words, the head will never be        *
 * None / null                                                   *
 *                                                               *
+* Input 1:  1 -> 2 -> 3 -> 4 -> 5 -> 6                          *
+* Output 1: 1 -> 6 -> 2 -> 5 -> 3 -> 4                          *
 *                                                               *
 ****************************************************************/
 
