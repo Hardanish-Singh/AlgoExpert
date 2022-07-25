@@ -94,70 +94,70 @@ class Program
                         copy = copy.next;  
                 }
 
-        current = reverseList( current );
+                current = reverseList( current );
 
-        LinkedList copy2 = linkedList;
-        while( linkedList != null )
-        {
-        if( linkedList.value == previous.value )
-        {
-        break;
-        }
-        linkedList = linkedList.next;
-        }
-        linkedList.next = null;
+                // MAKE LINKEDLIST list1 FROM STARTING NODE TO PREVIOUS NODE
+                LinkedList list1 = linkedList;
+                while( linkedList != null )
+                {
+                        if( linkedList.value == previous.value )
+                        {
+                                break;
+                        }
+                        linkedList = linkedList.next;
+                }
+                linkedList.next = null;
 
-        LinkedList head = null;
-        LinkedList tail = null;
-        LinkedList node = null;
+                // CONSTRUCT ZIP LINKED LIST
+                LinkedList head = null;
+                LinkedList tail = null;
+                LinkedList node = null;
 
-        while( true )
-        {
-        if( copy2 != null && current != null ) 
-        {
-        if( head == null )
-        {
-        node = new LinkedList( copy2.value );
-        head = tail = node;
-        }
-        else
-        {
-        node = new LinkedList( copy2.value );
-        tail.next = node;
-        tail = node;
-        }
-        node = new LinkedList( current.value );
-        tail.next = node;
-        tail = node;
-        }
+                while( true )
+                {
+                        if( list1 != null && current != null ) 
+                        {
+                                if( head == null )
+                                {
+                                        node = new LinkedList( list1.value );
+                                        head = tail = node;
+                                }
+                                else
+                                {
+                                        node = new LinkedList( list1.value );
+                                        tail.next = node;
+                                        tail = node;
+                                }
+                                node = new LinkedList( current.value );
+                                tail.next = node;
+                                tail = node;
+                        }
 
-        else if( copy2 != null && current == null )
-        {
-        node = new LinkedList( copy2.value );
-        tail.next = node;
-        tail = node;
-        break;
-        }
+                        else if( list1 != null && current == null )
+                        {
+                                node = new LinkedList( list1.value );
+                                tail.next = node;
+                                tail = node;
+                                break;
+                        }
 
-        else if( copy2 == null && current != null )
-        {
-        node = new LinkedList( current.value );
-        tail.next = node;
-        tail = node;
-        break;
-        }
+                        else if( list1 == null && current != null )
+                        {
+                                node = new LinkedList( current.value );
+                                tail.next = node;
+                                tail = node;
+                                break;
+                        }
 
-        else
-        {
-        break;
-        }
+                        else
+                        {
+                                break;
+                        }
 
-        copy2 = copy2.next;
-        current = current.next;
-        }
+                        list1 = list1.next;
+                        current = current.next;
+                }
 
-        return head;
-
+                return head;
         }
-  
 }
