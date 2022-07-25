@@ -84,7 +84,7 @@ class Program
                 // FIND PREVIOUS NODE BEFORE MIDDLE NODE
                 LinkedList copy = linkedList;
                 LinkedList previous = null;
-                while( list2.value == copy.value )
+                while( list2.value != copy.value )
                 {
                         previous = copy;
                         copy = copy.next;  
