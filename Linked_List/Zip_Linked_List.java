@@ -42,30 +42,29 @@ class Program
                 return head;
         }
 
-  public static LinkedList reverseList( LinkedList head )
+        public static LinkedList reverseList( LinkedList head )
         {
 
-		if( head == null )
-		{
-			return null;
-		}
+                if( head == null )
+                {
+                        return null;
+                }
 
-		LinkedList previous = head;
-		LinkedList current = head.next;
-		LinkedList tail = head;
-		tail.next = null;
+                LinkedList previous = head;
+                LinkedList current = head.next;
+                LinkedList tail = head;
+                tail.next = null;
 
-		while( current != null )
-		{
-			LinkedList next = current.next;
-			current.next = previous;
-			previous = current;
-			current = next;
-		}
+                while( current != null )
+                {
+                        LinkedList next = current.next;
+                        current.next = previous;
+                        previous = current;
+                        current = next;
+                }
 
-		head = previous;
-		return head;
-
+                head = previous;
+                return head;
         }
 
   public LinkedList zipLinkedList(LinkedList linkedList) 
