@@ -7,6 +7,8 @@
 *                                                               *
 * A Linked List is zipped if its nodes are in the following     *
 * order, where  k is the length of the Linked List:             *
+* 1^st node -> k^th node -> 2^nd node -> (k - 1)^th node ->     *
+* 3^rd node -> (k - 2)^th node ->                               *
 *                                                               *
 ****************************************************************/
 
