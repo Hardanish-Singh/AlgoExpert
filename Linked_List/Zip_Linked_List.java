@@ -104,7 +104,7 @@ class Program
                 return head;
         }
 
-        public LinkedList zipLinkedList(LinkedList linkedList) 
+        public LinkedList zipLinkedList( LinkedList linkedList ) 
         {
                 if( linkedList == null )
                 {
