@@ -49,7 +49,7 @@ class Program
                 }
         }
 
-        public static LinkedList middleNode(LinkedList head) 
+        public static LinkedList middleNode( LinkedList head ) 
         {
                 double middle = 0;
                 LinkedList list2 = head;
