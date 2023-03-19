@@ -1,0 +1,95 @@
+/* 
+         FrontendExpert: https://www.algoexpert.io/frontend/coding-questions/pig-emoji
+*/
+
+:root {
+        --main-color: #ffc0cb;
+        --main-border: solid black 5px;
+        --secondary-border: solid black 2px;
+        --head-size: 200px;
+}
+
+.head {
+        width: var(--head-size);
+        height: var(--head-size);
+        border-radius: 100%;
+        background-color: var(--main-color);
+        border: var(--main-border);
+        position: relative;
+        margin-top: calc(var(--head-size) / 10);
+}
+
+.ear {
+        --ear-size: calc(var(--head-size) / 4);
+        --ear-horizontal-offset: calc(var(--head-size) / 20);
+        width: var(--ear-size);
+        height: var(--ear-size);
+        border-radius: 100%;
+        background-color: var(--main-color);
+        border: var(--main-border);
+        position: absolute;
+        top: calc(-1 * var(--head-size) / 20);
+        z-index: -1;
+}
+
+.ear:first-child {
+        left: var(--ear-horizontal-offset);
+}
+
+.ear:last-child {
+        right: var(--ear-horizontal-offset);
+}
+
+.eye {
+        --eye-size: calc(var(--head-size) / 4);
+        --eye-horizontal-offset: calc(var(--head-size) * 0.15);
+        width: var(--eye-size);
+        height: var(--eye-size);
+        border-radius: 100%;
+        background-color: white;
+        border: var(--secondary-border);
+        position: absolute;
+        top: calc(var(--head-size) / 5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.eye:first-child {
+        left: var(--eye-horizontal-offset);
+}
+
+.eye:last-child {
+        right: var(--eye-horizontal-offset);
+}
+
+.pupil {
+        --pupil-size: calc(var(--eye-size) / 2);
+        width: var(--pupil-size);
+        height: var(--pupil-size);
+        border-radius: 50%;
+        background-color: black;
+}
+
+.nose {
+        width: calc(var(--head-size) / 2);
+        height: calc(var(--head-size) * 0.3);
+        border-radius: 35%;
+        background-color: #f57187;
+        border: var(--secondary-border);
+        position: absolute;
+        bottom: calc(var(--head-size) * 0.15);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+}
+
+.nostril {
+        width: 25%;
+        height: 50%;
+        border-radius: 50%;
+        background-color: black;
+}
